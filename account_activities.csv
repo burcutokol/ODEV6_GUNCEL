@@ -1,0 +1,8 @@
+id,account_id,expense_details,amount
+1,1,yemek,-11
+2,2,havale,-100
+3,2,maaş,5000
+4,1,"Döviz alımı",-500
+5,3,Market,-400
+6,1,"Döviz alımı",-50
+7,4,"Döviz alımı",-50
