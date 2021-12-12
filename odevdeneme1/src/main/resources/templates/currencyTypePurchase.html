@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>DÖVİZ SEÇİMİ</title>
+<link rel="stylesheet" type="text/css"
+	href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container text-center">
+		<div>
+			<br> <br> <br>
+
+			<h1>Lütfen işlem yapılacak döviz türünü seçiniz.</h1>
+		</div>
+		<form style="max-width: 600px; margin: 0 auto">
+			<div class="container">
+				<h2>
+					<br> <label class="col-form-label col-4"> <select
+						name="demo-category" id="demo-category">
+							<option value="Döviz Türü seçiniz">Seçiniz</option>
+							<option value="USD">USD</option>
+							<option value="EUR">EUR</option>
+					</select>
+					</label>
+				</h2>
+			</div>
+		</form>
+		<br> <br>
+		<div class="btn-group">
+			<center>
+				<input type="button" value="Onayla" class="btn btn-primary"
+					onclick="check()" />
+			</center>
+
+			&nbsp; &nbsp;
+			<form th:action="@{/}">
+
+				<button type="submit" class="btn btn-primary">Ana Menüye
+					Dön</button>
+			</form>
+		</div>
+	</div>
+	<br>
+	<script type="text/javascript">
+		function check() {
+			var element = document.getElementById("demo-category");
+			var str = element.value;
+			window.location.href = "/currencyPurchase/" + str;
+		}
+	</script>
+</body>
+</html>
+
+
